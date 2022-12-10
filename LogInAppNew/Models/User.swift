@@ -28,4 +28,8 @@ struct Person {
     let age: Int
     let profession: String
     let desiredProfession: String
+    
+    var fullName: String {
+        name + " " + surname
+    }
 }

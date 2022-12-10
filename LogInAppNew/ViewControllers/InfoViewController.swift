@@ -15,6 +15,7 @@ class InfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = user.data.fullName
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,8 +31,8 @@ class InfoViewController: UIViewController {
         moreInfoVC.user = user
         moreInfoVC.gradient = gradient
         
-        let backButton = UIBarButtonItem()
-        backButton.title = "\(user.data.name) \(user.data.surname)"
-        navigationItem.backBarButtonItem = backButton
+//        let backButton = UIBarButtonItem()
+//        backButton.title = user.data.fullName
+//        navigationItem.backBarButtonItem = backButton
     }
 }

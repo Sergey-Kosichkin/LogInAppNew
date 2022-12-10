@@ -17,7 +17,7 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeLabel.text = "Welcome, \(user.data.name) \(user.data.surname)!"
+        welcomeLabel.text = "Welcome, \(user.data.fullName)!"
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -49,7 +49,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        viewControllers[1].tabBarItem.title = "\(user.data.name) \(user.data.surname)"
+        viewControllers[1].tabBarItem.title = "\(user.data.fullName)"
         
         for viewController in viewControllers {
             if let welcomeVC = viewController as? WelcomeViewController {

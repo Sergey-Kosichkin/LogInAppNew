@@ -19,7 +19,7 @@ class MoreInfoViewController: UIViewController {
         super.viewDidLoad()
         
         infoLabel.text = """
-My name is \(user.data.name) \(user.data.surname)
+My name is \(user.data.fullName)
 I am \(user.data.age) years old
 My profession is \(user.data.profession)
 I want to become \(user.data.desiredProfession)

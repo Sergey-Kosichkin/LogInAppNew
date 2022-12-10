@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="VN6-jh-IZa">
-                                <rect key="frame" x="52.666666666666657" y="336.66666666666669" width="288" height="178.66666666666669"/>
+                                <rect key="frame" x="52.666666666666629" y="336.66666666666669" width="288" height="178.66666666666669"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uuR-eO-hgE">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="34"/>
@@ -106,13 +106,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWd-VP-znk">
-                                <rect key="frame" x="169.66666666666666" y="269" width="54" height="60"/>
+                                <rect key="frame" x="169.66666666666663" y="269" width="54" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgz-xB-yZN">
-                                <rect key="frame" x="154.33333333333334" y="614" width="84.666666666666657" height="35"/>
+                                <rect key="frame" x="154" y="614" width="85" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log Out">
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
@@ -145,7 +145,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mZY-4n-0hs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="D1J-wI-W6B" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2616" y="-33"/>
+            <point key="canvasLocation" x="1552" y="701"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="6qj-jV-7aE">
@@ -178,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LhO-PO-RK3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4027" y="-33"/>
+            <point key="canvasLocation" x="2966" y="701"/>
         </scene>
         <!--More Info View Controller-->
         <scene sceneID="0Li-K7-xFd">
@@ -210,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TFX-mI-KCt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4732" y="-33"/>
+            <point key="canvasLocation" x="2966" y="1410"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="TmL-kX-T1M">
@@ -249,7 +249,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTg-0x-wl2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3319.8473282442746" y="-33.098591549295776"/>
+            <point key="canvasLocation" x="2262" y="701"/>
         </scene>
     </scenes>
     <resources>
