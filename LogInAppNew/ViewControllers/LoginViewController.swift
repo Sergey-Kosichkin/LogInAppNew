@@ -14,8 +14,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var logInButton: UIButton!
     
-    private let userName = "n"
-    private let password = "m"
+    private let user = User.getUser()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,15 +33,44 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else {
+        
+        let gradient = CAGradientLayer()
+        gradient.frame = view.bounds
+        gradient.colors = [UIColor.systemPink.cgColor,
+                                UIColor.systemBlue.cgColor]
+        gradient.opacity = 0.3
+        
+        
+        guard let tabBarController = segue.destination as? UITabBarController else {
             return
         }
-        welcomeVC.userName = userTF.text
+        
+        guard let viewControllers = tabBarController.viewControllers else {
+            return
+        }
+        
+        viewControllers[1].tabBarItem.title = "\(user.data.name) \(user.data.surname)"
+        
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.user = user
+                welcomeVC.gradient = gradient
+            } else if let navigationVC = viewController as? UINavigationController {
+                
+                if let infoVC = navigationVC.topViewController as? InfoViewController {
+                    infoVC.user = user
+                    infoVC.gradient = gradient
+                }
+                
+            }
+            
+        }
+        
     }
     
     
     @IBAction func logInAction() {
-        guard userTF.text == userName, passwordTF.text == password else {
+        guard userTF.text == user.login, passwordTF.text == user.password else {
             showAlert(withTitle: "Error!",
                       andMessage: "Wrong user name or password")
             passwordTF.text = ""
@@ -52,11 +81,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func forgotUserNameAction() {
-        showAlert(withTitle: "Error!", andMessage: "Your name is \(userName)")
+        showAlert(withTitle: "Error!", andMessage: "Your name is \(user.login)")
     }
     
     @IBAction func forgotPasswordAction() {
-        showAlert(withTitle: "Error!", andMessage: "Your password is \(password)")
+        showAlert(withTitle: "Error!", andMessage: "Your password is \(user.password)")
         
     }
     
